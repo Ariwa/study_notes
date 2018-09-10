@@ -1,0 +1,85 @@
+1，如何对a元素的状态指定样式
+如何a元素链接为未点击状态，可指定为绿色
+示例：a：link｛
+                     color：green；
+｝
+
+如果是已点击状态，可指定为红色
+示例：a：visited｛
+                          color：red；
+｝
+
+如果是悬停状态，可指定为黄色
+示例：a：hover｛
+                          color：yellow；
+｝
+
+除了这三种常用的状态，还有“焦点”状态focus（当用户用tab键切换到某个链接时的状态）
+和“活跃”状态active（用户第一次打开该链接）
+
+2，层叠（样式使用优先级）
+具体百度
+
+3，浮动布局属性float
+示例：#gg{float:right;
+}
+表示浮动元素从右浮动
+
+4，clear属性
+如果不希望右边有浮动元素，可指定：
+#gg｛clear：right；	
+｝
+
+5，凝胶布局auto
+示例：#allcontent{
+    width: 1000px;
+    padding: 5px 0px 5px 0px;
+    background-color:#675c47;
+    margin-left: auto;
+    margin-right: auto;
+}
+如果左右外边距都是属性值都是auto，则左外边距=右外边距，显示效果就是居中
+
+6，绝对定位absolute
+示例：#cc｛
+position：absolute；
+top：200px；
+right：200px；
+width：200px；
+｝
+首先该样式告诉浏览器会使用绝对定位，通过top和right属性来定位元素的位置，width定义元素的大小
+
+7，固定定位fixed
+html：
+<div>
+<a href="freecoffee.html" title="Click here to get your free coffee">
+<img src="images/ticket.gif" alt="Starbuss coupon ticket">
+</div>
+
+css:
+#coupon ｛
+position：fixed；
+top:300px;
+left:-100px;
+这里的-90px是为了告诉浏览器把这个图像定位在距离视窗边界左边100像素的位置，即左移100像素
+#coupon a,img｛
+border:none;
+｝
+由于可点击的图像默认是又边框的，所以还需要设置图像的样式将边框去掉。
+css中有一条规则，建立链接的下划线只能使用边框来实现，必须关闭text-decoration属性
+
+8，css表格现实布局
+创建表格示例：
+div#tableContainner｛
+display：table；
+｝
+
+创建行示例：
+div#tableRow｛
+display：table-row；
+｝
+
+创建单元格：
+div#main｛
+display：table-cell；
+｝
